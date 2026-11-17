@@ -3,55 +3,39 @@
 
     </head>
     <body> 
-        <input type = "text" id ="task"> 
+        
 
-        <button> Add Task </button> 
+        <input type="text" /> 
 
-
-        <ul id="list">
-
-        </ul>
+        <button>Add Task </button>
 
         <script> 
-        class Task
-        { 
-            title;
-            status;
-            time;
-        }
-           class TodoList
+ 
+           class Task
            {
-                tasks = [] ; 
-
-                addTodo(){
-                    var newTodo  = new Task()
-
-                }
-           
-           } 
-
-           var t = new TodoList()
-           console.log("t=",t)
+            title ;
+            status ; 
+            time
+           }
   
-        class clothes{
-            mens ;
-            females ;
-            kids
-        }
-       
-        class employess 
-        {
-            males ;
-            females ;
-            
-        }
-    
-         class clothsShop{
-            clothes ;
-            employess;
+
+         class TodoList{
+            tasks =[]
+
+            addTodo()
+            {
+               
+                var newTodo  =  new Task()
+                this.tasks.push(newTodo)
+
+
+            }
 
          }
 
+             
+  
+        
 
         </script>
     </body>

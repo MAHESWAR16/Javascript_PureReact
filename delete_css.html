@@ -9,77 +9,67 @@
                   <script>  
                    
 
-                   
-                  
-
-
-                        
-                        function contacts()
-                        {
-                            this.mobile = m ;
-                            this.email = e
-                        }
- 
- 
-
-            
- 
-                        function details(n,l)
-                        {
-                            this.firstname = n ; 
-                            this.lastname = l;
-                        }
-                     
-                        console.dir(details)
-                         
-                        details.prototype.company ="edupoly"
-
-                        var st1 = new details("mahesh","d")
-
-                     console.log(st1) 
-
-                     st1.__proto__.company ="vlr" 
-
-                     console.log(st1)
-
-                     
-
+                   var obj = 
+                   {
+                    a:123,
+                    b:345,
+                    city:"hyderabad"
+                   }
+                  var a = "city"
+               console.log(obj[a]) 
+               console.log(obj["a"])
+               console.log(obj.a)
                 
-            function mobile(m,s,p,c,d)
+          
+              for(var j in obj)
+              {
+                 console.log("j=",j)
+              }
+
+
+            var person ={
+                basic:25000,
+                hra:23000,
+                da:90000,
+                ta:23000
+            }
+         
+            var total_salary = 0
+
+            for(var m in person)
             {
-              
-                this.model_name = m;
+                console.log("m=",m)
+                total_salary = total_salary+person[m]
+            }
+             
+            console.log(total_salary) 
 
-                this.storage = s ;
-                this.price = p ;
-                this.color = c ;
-                this.discount = d ; 
 
-                this.final_price = function(){
-                    
-                    var fp = this.price - (this.price*this.discount/100) 
-                    return fp
-                   
-                }
+            var myexp = [
 
+            {
+                company:"cmc",
+                exp:0.5
+
+            },
+            {
+                company:"ctc",
+                exp:2.6
+            },
+            {
+                company:"wipro",
+                exp:3
+            },
+            {
+                company:"minmitus",
+                exp:8
+            },
+            {
+                company:"edupoly",
+                exp:2
             }
 
-         
-              
-
-
-
-             var redmi_details = new mobile("note_8 pro","128gb",13000,"black",50) 
-             console.log(redmi_details) 
-
-             var fp = redmi_details.final_price()
-              
-             console.log("final_price =",fp)
-
-
-             
-
-
+            ]
      
 
 

@@ -1,85 +1,189 @@
 <html> 
     <head> 
-        <body> 
 
-                   
-        <h1> hello edupoly</h1>
-
-            
-                  <script>  
-                   
-
-                   var obj = 
-                   {
-                    a:123,
-                    b:345,
-                    city:"hyderabad"
-                   }
-                  var a = "city"
-               console.log(obj[a]) 
-               console.log(obj["a"])
-               console.log(obj.a)
-                
-          
-              for(var j in obj)
-              {
-                 console.log("j=",j)
-              }
-
-
-            var person ={
-                basic:25000,
-                hra:23000,
-                da:90000,
-                ta:23000
-            }
-         
-            var total_salary = 0
-
-            for(var m in person)
-            {
-                console.log("m=",m)
-                total_salary = total_salary+person[m]
-            }
-             
-            console.log(total_salary) 
-
-
-            var myexp = [
-
-            {
-                company:"cmc",
-                exp:0.5
-
-            },
-            {
-                company:"ctc",
-                exp:2.6
-            },
-            {
-                company:"wipro",
-                exp:3
-            },
-            {
-                company:"minmitus",
-                exp:8
-            },
-            {
-                company:"edupoly",
-                exp:2
-            }
-
-            ]
-     
-
-
-
-
-
-            </script>
-
-
-
-        </body>
     </head>
+    <body> 
+
+        <script> 
+
+     
+  
+       var products = [
+
+        {
+
+            "id": 1,
+
+            "title": "iPhone 9",
+
+            "description": "An apple mobile which is nothing like apple",
+
+            "price": 549,
+
+            "discountPercentage": 12.96,
+
+            "rating": 4.69,
+
+            "stock": 94,
+
+            "brand": "Apple",
+
+            "category": "smartphones",
+
+            "thumbnail": "products/1/thumbnail.jpg"
+
+        },
+
+        {
+
+            "id": 2,
+
+            "title": "iPhone X",
+
+            "description": "6.5-inch Super Retina HD display with OLED",
+
+            "price": 899,
+
+            "discountPercentage": 17.94,
+
+            "rating": 4.44,
+
+            "stock": 34,
+
+            "brand": "Apple",
+
+            "category": "smartphones",
+
+            "thumbnail": "products/2/thumbnail.jpg"
+
+        },
+
+        {
+
+            "id": 3,
+
+            "title": "Samsung Universe 9",
+
+            "description": "Samsung's new phone which goes beyond Galaxy",
+
+            "price": 1249,
+
+            "discountPercentage": 15.46,
+
+            "rating": 4.09,
+
+            "stock": 36,
+
+            "brand": "Samsung",
+
+            "category": "smartphones",
+
+            "thumbnail": "products/3/thumbnail.jpg"
+
+        },
+
+        {
+
+            "id": 4,
+
+            "title": "OPPOF19",
+
+            "description": "OPPO F19 is officially announced on April 2021.",
+
+            "price": 280,
+
+            "discountPercentage": 17.91,
+
+            "rating": 4.3,
+
+            "stock": 123,
+
+            "brand": "OPPO",
+
+            "category": "smartphones",
+
+            "thumbnail": "products/4/thumbnail.jpg"
+
+        },
+
+        {
+
+            "id": 5,
+
+            "title": "Huawei P30",
+
+            "description": "Huawei's re-badged P30 Pro New Edition",
+
+            "price": 499,
+
+            "discountPercentage": 10.58,
+
+            "rating": 4.09,
+
+            "stock": 32,
+
+            "brand": "Huawei",
+
+            "category": "smartphones"
+
+        }
+
+    ];
+
+          products.sort(function(a,b){
+            if(a.name < b.name)
+          {
+            return 1 
+          }
+          else 
+          {
+            return -1
+          }
+          })
+           
+          console.log(products)
+
+
+             
+             var array = [10,20,3,40,5]
+
+
+           var f =   array.sort(function(a,b){
+                if(a>b)
+             {
+                return 1
+             }
+             else 
+             {
+                return -1
+             }
+             })
+           
+             console.log("f=",f)
+             console.log("array =",array)
+                 
+             var f = array.reduce(function(a,b){
+                console.log("a=",a,"b=",b)
+                a.push(b)
+                return a
+             },[])
+           
+             console.log("f=",f)
+             
+             //foreach 
+             // map
+             //filter
+             //reduce 
+             //sort
+
+              var g = array.map(function(a,b){
+                console.log("a=",a,"b=",b)
+                return a*10
+              })
+                
+              console.log("g=",g)
+
+
+        </script>
+    </body>
 </html>

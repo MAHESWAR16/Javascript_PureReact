@@ -1,48 +1,37 @@
 <html> 
-    <head> 
-      <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <head> 
+
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
 <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-       <style> 
-              .abc{
-                background-color: rgb(13, 164, 156);
-              }
+  </head>
 
-       </style>
+  <body> 
+        <h1> This is h1 element created through html</h1>
 
 
-        <body> 
+  </body> 
 
-             <h1 style="color: brown;" class="abc">Srikanth</h1> 
-
-             <div id="root"> </div>
-
-             <div id="main"> </div>
-
-        </body>
-        <script type="text/babel"> 
+  <script type ="text/babel"> 
            var newh1 = document.createElement("h1")
-           newh1.innerHTML ="mOHAN"
-           newh1.classList.add("abc")
+           newh1.innerHTML = "this is another h1 element created through dom "
+           document.body.appendChild(newh1)
+           console.dir(newh1)
+
+   
+          
+           var g = React.createElement("h3",{},"welcome to react")
+           ReactDOM.render(g,document.body)
            
-           document.body.appendChild(newh1) 
 
+           var f = React.createElement("h1",{},"this is react h1")
+           ReactDOM.render(f,document.body) 
 
-           
+           var t = <h1> jsx mahesh </h1>
+           console.log("t=",t)
+           ReactDOM.render(t,document.body)
 
-           var rh1 = React.createElement("h1",{style:{
-            color:"red"
-           },
-           class:"abc"
-        },"mahesh") 
-           ReactDOM.render(rh1,document.getElementById("root"))  
-
-
-          var jh1 = <h1 style={{color:"red",border:"2px solid"}} class="abc">Divya</h1>
-          ReactDom.render(jh1,document.getElementById("main"))
-
-        </script>
-
-    </head>
+  </script>
 </html>
